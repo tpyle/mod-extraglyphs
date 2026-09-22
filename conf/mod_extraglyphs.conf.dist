@@ -1,0 +1,40 @@
+[worldserver]
+
+###################################################################################################
+# EXTRA GLYPHS
+#
+#    A glyph's effect is nothing more than a passive aura: socketing one casts
+#    GlyphProperties.SpellId on the player. The six sockets are a client-side
+#    limit (fixed update fields, PLAYER_FIELD_GLYPHS_1..6), not a server one, so
+#    this module keeps a second list of glyphs per character and per talent
+#    spec, outside the sockets, and applies their spells the same way. The list
+#    is edited from the ExtraGlyphs addon (client-patch/addon/ExtraGlyphs) over
+#    the addon command channel:
+#
+#        extraglyphs list                 active extra glyphs for the current spec
+#        extraglyphs catalog              every glyph the class can use
+#        extraglyphs add <glyphId>        apply one (consumes the glyph item)
+#        extraglyphs remove <glyphId>     drop one (the glyph is lost, as with sockets)
+#
+#    Extra glyphs are per spec, re-applied on login and on spec switch, and never
+#    duplicate a glyph already in a socket.
+#
+#    ExtraGlyphs.Enable
+#        Description: Enable the module.
+#        Default:     1
+#
+#    ExtraGlyphs.Max
+#        Description: How many extra glyphs each spec may hold beyond the six sockets.
+#                     0 means no limit.
+#        Default:     6
+#
+#    ExtraGlyphs.RequireItem
+#        Description: Adding an extra glyph consumes one of that glyph's items from the bags,
+#                     exactly like socketing it. Set to 0 to let players apply any glyph of
+#                     their class for free.
+#        Default:     1
+#
+
+ExtraGlyphs.Enable = 1
+ExtraGlyphs.Max = 6
+ExtraGlyphs.RequireItem = 1

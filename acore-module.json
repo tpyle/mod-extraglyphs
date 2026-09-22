@@ -1,0 +1,5 @@
+{
+    "name": "mod-extraglyphs",
+    "description": "Glyph effects beyond the six sockets, applied as passive auras and managed from an addon panel",
+    "version": "1.0.0"
+}
