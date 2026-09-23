@@ -43,3 +43,8 @@ Commands are `SEC_PLAYER`, `Console::No`, and only ever act on the caller.
 
 The `ExtraGlyphs` client addon for the panel; the commands also work typed
 into the chat box.
+
+## Licence
+
+GNU Affero General Public License v3.0, the licence AzerothCore and its
+modules use. See [LICENSE](LICENSE).
